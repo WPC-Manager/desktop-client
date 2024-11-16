@@ -13,10 +13,12 @@ QMAKE_TARGET_DESCRIPTION = WolfPack Compaign Manager
 QMAKE_TARGET_TRADEMARKS = WPC Manager
 
 SOURCES += \
+    i18n/localization.cpp \
     main.cpp \
     wpcmanager.cpp
 
 HEADERS += \
+    i18n/localization.h \
     wpcmanager.h
 
 FORMS += \
@@ -25,3 +27,7 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+TRANSLATIONS += \
+    i18n/desktop_client_en_US.ts \
+    i18n/desktop_client_ru_RU.ts

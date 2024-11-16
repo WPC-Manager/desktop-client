@@ -6,25 +6,118 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>600</width>
+    <height>400</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>WPCManager</string>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="windowTitle">
+   <string>manager.header</string>
+  </property>
+  <widget class="QWidget" name="mainwindow">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>600</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menumanager_menu_home">
+    <property name="title">
+     <string>manager.menu.home</string>
+    </property>
+    <addaction name="actionmanager_menu_home_quit"/>
+   </widget>
+   <widget class="QMenu" name="menumanager_menu_settings">
+    <property name="title">
+     <string>manager.menu.settings</string>
+    </property>
+    <widget class="QMenu" name="menumanager_menu_settings_language">
+     <property name="title">
+      <string>manager.menu.settings.language</string>
+     </property>
+     <addaction name="actionmanager_menu_settings_language_english"/>
+     <addaction name="actionmanager_menu_settings_language_russian"/>
+    </widget>
+    <widget class="QMenu" name="menumanager_menu_settings_theme">
+     <property name="title">
+      <string>manager.menu.settings.theme</string>
+     </property>
+     <addaction name="actionmanager_menu_settings_theme_light"/>
+     <addaction name="actionmanager_menu_settings_theme_dark"/>
+    </widget>
+    <addaction name="menumanager_menu_settings_language"/>
+    <addaction name="menumanager_menu_settings_theme"/>
+   </widget>
+   <addaction name="menumanager_menu_home"/>
+   <addaction name="menumanager_menu_settings"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionmanager_menu_home_quit">
+   <property name="text">
+    <string>manager.menu.home.quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionmanager_menu_settings_language_english">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>manager.menu.settings.language.english</string>
+   </property>
+  </action>
+  <action name="actionmanager_menu_settings_language_russian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>manager.menu.settings.language.russian</string>
+   </property>
+  </action>
+  <action name="actionmanager_menu_settings_theme_light">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>manager.menu.settings.theme.light</string>
+   </property>
+  </action>
+  <action name="actionmanager_menu_settings_theme_dark">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>manager.menu.settings.theme.dark</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
